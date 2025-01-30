@@ -9,7 +9,7 @@ module.exports.tag = tag;
  * @returns {string}
  */
 function attr(attributes) {
-    if (!Object.keys(attributes).length) return '';
+    if (!Object.keys(attributes??{}).length) return '';
     return ' ' + Object.keys(attributes).map(function(key) {
         return key + '="' + esc(attributes[key]) + '"';
     }).join(' ');
