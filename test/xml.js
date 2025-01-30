@@ -4,7 +4,10 @@ var test = require('tap').test,
 test('tagClose', function(t) {
     t.equal(strxml.tagClose('hi'), '<hi/>');
     t.equal(strxml.tagClose('hi', {true:'true'}), '<hi true="true"/>');
-    t.equal(strxml.tagClose('hi', {true:'true', sky:'blue'}), '<hi true="true" sky="blue"/>');
+    t.equal(strxml.tagClose('hi', {
+        true:'true', 
+        sky:'blue'
+    }), '<hi true="true" sky="blue"/>');
     t.end();
 });
 
